@@ -5,46 +5,60 @@
         <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
         <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
 
-        <link href="/static/calculator/styles.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+        <!-- <link href="/static/calculator/styles.css" rel="stylesheet"> -->
+        <link href="/static/styles.css" rel="stylesheet">
 
         <script src="https://cdn.jsdelivr.net/npm/mathjs@11.5.0/lib/browser/math.min.js" integrity="sha384-lyk1iakc3vJYtFuexLv0ybpdIxL8PXH/XAyhBkYuaW1gBhc08sPvcnfS0wfLot1h" crossorigin="anonymous"></script>
         <script src="parser.js"></script>
 
-        <link rel="icon" type="image/ico" href="/static/calculator/favicon.ico">
+        <link rel="icon" type="image/ico" href="/static/index/favicon.ico">
         <title>Feet and Inches Calculator</title>
     </head>
-    <body>
-        <nav class="navbar navbar-custom">
-            <img src="/static/calculator/android-chrome-512x512.png" class="d-inline-block align-top mx-3" alt="" style="max-width: 3em;max-height: 3em;">
-                <span class="text-left navbar-custom" style="font-size:2em">Measurement Calculator</span>
-        </nav>
-        <form>
-            <div class="form-group textbox">
-                <input class="form-control" id="expression" autocomplete="off" autofocus placeholder="Expression" type="text">
-                <small id="expressionHelp" class="form-text text-muted" style="display:flex; justify-content: space-between">
-                    <div style="padding-right: 1em">Don't add dashes between feet and inches.</div>
-                    <div style="text-align: right">
-                        Precision:
-                        <div class="form-check form-check-inline" style="margin-bottom:0">
-                            <input class="form-check-input" type="radio" name="precisionRadio" id="sixteen" value="0.0625">
-                            <label class="form-check-label" for="sixteen">1/16</label>
-                        </div>
-                        <div class="form-check form-check-inline" style="margin-bottom:0">
-                            <input class="form-check-input" type="radio" name="precisionRadio" id="thirtyTwo" value="0.03125">
-                            <label class="form-check-label" for="thirtyTwo">1/32</label>
-                        </div>
-                        <div class="form-check form-check-inline" style="margin-bottom:0">
-                            <input class="form-check-input" type="radio" name="precisionRadio" id="sixtyFour" value="0.015625" checked>
-                            <label class="form-check-label" for="sixtyFour">1/64</label>
-                        </div>
+    <body class="text-center">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <h3 class="masthead-brand">Feet and Inches Calculator</h3>
+                </div>
+            </header>
+            <main role="main" class="inner cover">
+                <form>
+                    <div class="form-group textbox">
+                        <input class="form-control" id="expression" autocomplete="off" autofocus placeholder="Expression" type="text">
+                        <small id="expressionHelp" class="form-text text-muted" style="display:flex; justify-content: space-between">
+                            <div style="padding-right: 1em">Don't add dashes between feet and inches.</div>
+                            <div style="text-align: right">
+                                Precision:
+                                <div class="form-check form-check-inline" style="margin-bottom:0">
+                                    <input class="form-check-input" type="radio" name="precisionRadio" id="sixteen" value="0.0625">
+                                    <label class="form-check-label" for="sixteen">1/16</label>
+                                </div>
+                                <div class="form-check form-check-inline" style="margin-bottom:0">
+                                    <input class="form-check-input" type="radio" name="precisionRadio" id="thirtyTwo" value="0.03125">
+                                    <label class="form-check-label" for="thirtyTwo">1/32</label>
+                                </div>
+                                <div class="form-check form-check-inline" style="margin-bottom:0">
+                                    <input class="form-check-input" type="radio" name="precisionRadio" id="sixtyFour" value="0.015625" checked>
+                                    <label class="form-check-label" for="sixtyFour">1/64</label>
+                                </div>
+                            </div>
+                        </small>
                     </div>
-                </small>
+                </form>
+                <p class="resultInch" id="ResultInches"></p>
+                <p id="ResultCM" class="text-muted resultCM"></p>
+        </main>
+        
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Andrew Hanshaw</p>
             </div>
-        </form>
-        <p class="resultInch" id="ResultInches"></p>
-        <p id="ResultCM" class="text-muted resultCM"></p>
-        <footer class="footer">
-            <a href="#" class="nav-link p-1 text-muted" style="font-size:0.6em; text-align: right">Created by: Andrew Hanshaw</a>
         </footer>
+        </div>
     </body>
 </html>
