@@ -16,14 +16,27 @@ To divide a length of 21'-7 1/8" into 3 parts, enter `(21'7+1/8)/3`, which is 7'
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <body>
-    <input type="text" id="inputField" placeholder="Enter expression here" style="width: 100%; margin-bottom: 20px;">
-    <div style="margin: 10px 0;">
+    <input type="text" id="inputField" placeholder="Enter expression here" style="width: 90%; margin-bottom: 20px;">
+    <div class="precision-controls" style="display: flex; align-items: center; gap: 8px; margin: 10px 0; width: 100%; min-width: 0;">
         <label>Precision:</label>
-        <button data-precision="0.25" style="padding-left: 14px;" class="active">1/4"</button>
-        <button data-precision="0.125" style="padding-left: 14px;">1/8"</button>
-        <button data-precision="0.25" style="padding-left: 14px;">1/16"</button>
-        <button data-precision="0.03125" style="padding-left: 14px;">1/32"</button>
-        <button data-precision="0.015625" style="padding-left: 14px;">1/64"</button>
+        <style>
+            .button-group button {
+                flex: 1 1 0%;
+                min-width: 0;
+                padding: 6px;
+                max-width: 75px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        </style>
+        <div class="button-group" style="display: flex; flex-wrap: nowrap; gap: 4px; flex: 1; min-width: 0;">
+            <button data-precision="0.25" class="active">1/4"</button>
+            <button data-precision="0.125">1/8"</button>
+            <button data-precision="0.0625">1/16"</button>
+            <button data-precision="0.03125">1/32"</button>
+            <button data-precision="0.015625">1/64"</button>
+        </div>
     </div>
     <div class="result-container" style="display: flex; align-items: center; gap: 20px;">
         <span class="result-label">Result:</span>
