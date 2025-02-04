@@ -24,14 +24,14 @@ body {
 
 time {
   display: block;
-  color: $flexoki-base-100;
+  color: $flexoki-base-700;
   margin: 0.5em 0 1em;
 }
 
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: $flexoki-base-900;
+  color: $flexoki-base-700;
   padding-top: 1em;
 }
 
@@ -102,7 +102,8 @@ nav {
 }
 
 code {
-  background: #f5f5f5;
+  background: $flexoki-base-100;
+  color: $my-green-500;
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
@@ -169,22 +170,53 @@ button {
   height: 32px; /* Ensures consistent height */
   white-space: nowrap; /* Prevents text wrapping */
 }
+button {
+  padding: 8px 8px;
+  font-size: 14px;
+  color: $flexoki-base-50;
+  border: 1px solid $flexoki-base-900;
+  background: $flexoki-base-950;
+  cursor: pointer;
+  margin: 2px;
+  border-radius: 4px;
+}
+
 button.active {
   background: $my-green-600 !important;
   color: $flexoki-base-50;
   border-color: $my-green-700;
 }
+
 button:hover {
-  background: $my-green-400;
-  border-color: $my-green-500;
+  background: $my-green-800;
   transition: opacity 0.8s ease-in-out;
 }
 
+/* Add these new styles */
 .copy-icon {
-  font-size: 14px;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
+
+/* Show on parent hover for non-touch devices */
+*:hover > .copy-icon {
+  opacity: 1;
+}
+
+/* Always show on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .copy-icon {
+    opacity: 1;
+  }
+}
+
+/* For iOS Safari specifically */
+@supports (-webkit-touch-callout: none) {
+  .copy-icon {
+    opacity: 1;
+  }
+}
+
 .copyable-text:hover .copy-icon {
   opacity: 1;
 }
@@ -193,6 +225,16 @@ button:hover {
   body {
     background-color: $flexoki-black;
     color: $flexoki-base-200;
+  }
+
+  time {
+    display: block;
+    color: $flexoki-base-600;
+    margin: 0.5em 0 1em;
+  }
+
+  footer {
+    color: $flexoki-base-600;
   }
 
   a {
@@ -254,5 +296,10 @@ button:hover {
   button:hover {
     background: $my-green-800;
     transition: opacity 0.8s ease-in-out;
+  }
+
+  code {
+    background: $flexoki-base-900;
+    color: $my-green-400;
   }
 }
