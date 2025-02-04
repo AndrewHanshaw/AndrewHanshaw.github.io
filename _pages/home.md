@@ -41,7 +41,7 @@ permalink: /
   {% endif %}
   
   {% if latest_note.excerpt %}
-    <p>{{ latest_note.excerpt | truncate: 200 }}</p>
+    <p>{{ latest_note.excerpt | strip_html | truncate: 200 }}</p>
   {% endif %}
 </div>
 
