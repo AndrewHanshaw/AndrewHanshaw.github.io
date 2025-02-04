@@ -8,9 +8,11 @@ permalink: /
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <header style="border-bottom: 1px solid #eee; padding-bottom: 1em; margin-bottom: 2em;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <h1 style="margin: 0;">{{ site.title }}</h1>
-    <div style="display: flex; gap: 1em;">
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1em;">
+    <h1 style="margin: 0; flex-grow: 1; min-width: 0; font-size: clamp(1rem, 5vw, 2rem); text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+      {{ site.title }}
+    </h1>
+    <div style="display: flex; gap: 1em; flex-shrink: 0;">
       <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
         <i class="fab fa-github fa-lg"></i>
       </a>
