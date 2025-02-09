@@ -6,8 +6,8 @@ I wrote this little tool a few years ago and it came in quite handy doing some b
 
 Some examples:
 
-To get the total length of (3) lengths of 2'-3 5/64", enter `(2'3+5/64)*3`, which is 6'-9 0.234375".
-To divide a length of 21'-7 1/8" into 3 parts, enter `(21'7+1/8)/3`, which is 7'-2 1/2".
+* To get the total length of (3) lengths of 2'-3 5/64", enter `(2'3+5/64)*3`, which is `6'-9 0.234375"`
+* To divide a length of 21'-7 1/8" into 3 parts, enter `(21'7+1/8)/3`, which is `7'-2 1/2"`
 
 &nbsp;
 
