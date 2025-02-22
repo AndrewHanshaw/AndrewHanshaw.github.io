@@ -3,9 +3,7 @@ title: Rendering App Store Screenshots with SwiftUI
 created_at: 2025-02-08
 last_modified_at: 2025-02-08
 ---
-
 <img src="{{ site.baseurl }}/assets/notes/rendering-images-with-swiftui/allScreenshots.png"/>
-
 When given an option between doing something with a GUI or by typing a set of commands or writing code, I'll typically choose the latter. Tools like [TeX](https://en.wikipedia.org/wiki/TeX) and [OpenSCAD](https://openscad.org) really make it feel like I have full control over the engine that drives the tool, unrestricted by the precision of a mouse or my ability to navigate a menu. Plus you can version control these types of files much easier than a the proprietary binary formats usually associated with GUI-based tools.
 
 So, as someone not very adept with typical design tools like Figma or Photoshop, I found myself looking for something more code-based when getting ready to publish my first iOS app, [PassKeepr](https://apps.apple.com/us/app/passkeepr/id6740440736). 
