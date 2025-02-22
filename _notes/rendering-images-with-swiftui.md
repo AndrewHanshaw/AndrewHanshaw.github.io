@@ -1,5 +1,7 @@
 ---
 title: Rendering App Store Screenshots with SwiftUI
+created_at: 2025-02-08
+last_modified_at: 2025-02-08
 ---
 
 <img src="{{ site.baseurl }}/assets/notes/rendering-images-with-swiftui/allScreenshots.png"/>
