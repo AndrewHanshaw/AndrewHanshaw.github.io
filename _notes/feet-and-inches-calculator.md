@@ -1,5 +1,7 @@
 ---
 title: Feet and inches calculator
+created_at: 2025-02-03
+last_modified_at: 2025-02-08
 ---
 
 I wrote this little tool a few years ago and it came in quite handy doing some basic measurements in feet, inches, and fractiontional inches. Just enter some lengths in the format `IN`, `FT'`, or `FT'IN"` and add (`+`), subtract (`-`), multiply (`*`), or divide (`/`). Note that measurements without a unit are assumed to be inches.
