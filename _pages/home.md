@@ -48,8 +48,17 @@ permalink: /
 <ul>
   {% assign recent_notes = site.notes | sort: "created_at" | reverse %}
   {% for note in recent_notes limit: 5 %}
-    <li>
+    <li class="recent-pages">
       {{ note.last_modified_at | date: "%b %-d, %Y" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+      {% if note.content contains '<img' %}
+        {% assign images = note.content | split: '<img ' %}
+        {% assign first_image = images[1] | split: '>' | first %}
+        {% if first_image contains 'src="' %}
+          {% assign image_src = first_image | split: 'src="' | last | split: '"' | first %}
+          <img src="{{ image_src }}" alt="Image from {{ note.title }}" style="max-width: 30%; height: auto; border-radius: 4px; margin: 1em 0;">
+        {% endif %}
+      {% endif %}
+      <p>{{ note.excerpt | strip_html | truncate: 200 }}</p>
     </li>
   {% endfor %}
 </ul>
